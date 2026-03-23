@@ -4,19 +4,20 @@
 # Time Complexity : O(n)
 # Space Complexity : O(1)
 # Insight : Area depends on min height, so move smaller pointer
+#Lets start
 
 class Solution(object):
     def maxArea(self, height):
         
-        capacity =0
+        capacitys =0
         i= 0 
         j=len(height)-1
         while i<j:
             distance = j-i
             area = min(height[j],height[i]) *distance
-            capacity = max(capacity,area)
+            capacitys = max(capacitys,area)
             if height[i]>height[j]:
                 j-=1
             else :
                 i+=1
-        return capacity
+        return capacitys
